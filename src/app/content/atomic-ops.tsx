@@ -6,7 +6,12 @@ export default function Article() {
   return (
     <article>
       <div className="w-full h-60 mb-10 rounded-md relative">
-        <Image src={`gradient3.jpg`} alt={"alt"} style={{ borderRadius: "6px", objectFit: "cover" }} fill />
+        <Image
+          src={`/interfaces_blog/gradient3.jpg`}
+          alt={"alt"}
+          style={{ borderRadius: "6px", objectFit: "cover" }}
+          fill
+        />
         <h1 className="px-2 m-2 absolute bottom-0 bg-background rounded-md">Atomics, Locks and Micro Benchmarks</h1>
       </div>
       <p>
