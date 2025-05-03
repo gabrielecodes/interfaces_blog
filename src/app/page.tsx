@@ -12,8 +12,14 @@ export default async function Home() {
   return (
     <main className="md:mt-20 mt-10 min-h-screen">
       <section className="md:mb-20 mb-10">
-        <div className="w-full h-60 mb-10 rounded-md relative">
-          <Image src={`/abstract1.jpg`} alt={"alt"} layout="fill" objectFit="cover" style={{ borderRadius: "6px" }} />
+        <div className="h-60 mb-10 rounded-md relative">
+          <Image
+            src={`abstract1.jpg`}
+            alt={"abstract art"}
+            priority={true}
+            style={{ borderRadius: "6px", objectFit: "cover" }}
+            fill
+          />
           <h1 className="px-2 mb-2 absolute bottom-0 left-2 bg-background rounded-md">Welcome</h1>
         </div>
         <p>

@@ -4,7 +4,7 @@ export default function Article() {
   return (
     <article>
       <div className="w-full h-60 mb-10 rounded-md relative">
-        <Image src={`/gradient1.jpg`} alt={"alt"} layout="fill" objectFit="cover" style={{ borderRadius: "6px" }} />
+        <Image src={`gradient1.jpg`} alt={"alt"} style={{ borderRadius: "6px", objectFit: "cover" }} fill />
         <h1 className="px-2 m-2 absolute bottom-0 bg-background rounded-md">Are AI Agents going to replace us?</h1>
       </div>
       <p>

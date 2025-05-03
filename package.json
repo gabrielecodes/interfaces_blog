@@ -3,14 +3,14 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "NODE_ENV=development next dev",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "predeploy": "npm run build",
+    "predeploy": "NODE_ENV=production npm run build",
     "deploy": "gh-pages -d out"
   },
-  "homepage": "https://gabrielecodes.github.io/interfaces_blog",
+  "homepage": "https://gabrielecodes.github.io/interfaces_blog/",
   "dependencies": {
     "highlight.js": "^11.11.1",
     "next": "^15.3.1",
