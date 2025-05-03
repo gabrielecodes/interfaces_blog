@@ -19,4 +19,11 @@ async function getPostById(postId: string) {
   return Post;
 }
 
-export { getPostById };
+function getAllPosts() {
+  const files = fs.readdirSync(POSTS_PATH);
+  const fileNames = files?.map((file) => file.split(".")[0]);
+
+  return fileNames;
+}
+
+export { getPostById, getAllPosts };
