@@ -1,1 +1,1 @@
-# NextJs Starter
+# Interfaces Blog

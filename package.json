@@ -10,7 +10,7 @@
     "predeploy": "npm run build",
     "deploy": "gh-pages -d out"
   },
-  "homepage": "https://<your-github-username>.github.io/<your-repo-name>",
+  "homepage": "https://gabrielecodes.github.io/<your-repo-name>",
   "dependencies": {
     "highlight.js": "^11.11.1",
     "next": "^15.3.1",
