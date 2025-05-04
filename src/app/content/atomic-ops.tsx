@@ -2,11 +2,18 @@ import React from "react";
 import Image from "next/image";
 import Code from "../components/code";
 
+const IMG_PREFIX = process.env.NODE_ENV == "production" ? "/interfaces_blog" : "";
+
 export default function Article() {
   return (
     <article>
       <div className="w-full h-60 mb-10 rounded-md relative">
-        <Image src={`/gradient3.jpg`} alt={"alt"} style={{ borderRadius: "6px", objectFit: "cover" }} fill />
+        <Image
+          src={`${IMG_PREFIX}` + `/gradient3.jpg`}
+          alt={"alt"}
+          style={{ borderRadius: "6px", objectFit: "cover" }}
+          fill
+        />
         <h1 className="px-2 m-2 absolute bottom-0 bg-background rounded-md">Atomics, Locks and Micro Benchmarks</h1>
       </div>
       <p>
@@ -52,8 +59,8 @@ export default function Article() {
         </li>
         <li className="ml-8">
           I&apos;m not using <mark>perf</mark> or similar for this one, just measuring time. It&apos;s not the perfect
-          way to proceed but it should be enough to give me a sense of what I&apos;m working with. I measure average and
-          variance. I&apos;m aiming at having better benchmarks for part 2.
+          way to proceed but it should be enough to give me a sense of what I&apos;m working with. I measure average
+          execution time and variance. I&apos;m aiming at having better benchmarks for part 2.
         </li>
       </ul>
       <p>
@@ -97,7 +104,7 @@ ret`}
             lang="rust"
             code={`const ITERS: u64 = 10_000_000;
 
-#[no_mangle]
+[inline(never)]
 fn nop() {
     for _ in 1..ITERS {
         black_box(());
@@ -116,7 +123,7 @@ fn nop() {
           <Code
             lineNumbers={false}
             lang="rust"
-            code={`##[inline(never)]
+            code={`#[inline(never)]
 fn atomic_load(val: &AtomicU64) {
     for _ in 1..ITERS {
         val.load(Ordering::Acquire);
@@ -145,7 +152,7 @@ fn try_push(val: &AtomicU64, slice: &mut Box<[MaybeUninit<u64>]>) {
       </div>
       <p>
         In case you&apos;re curious, the disassembled code for the load and store are here below. It doesn&apos;t look
-        intimidating so we shouldn&apos;t have a large performance degradation:
+        intimidating so we shouldn&apos;t have a large performance degradation.
       </p>
       <div className="my-4 md:flex overflow-scroll rounded-md bg-code">
         <div className="p-4">
@@ -376,12 +383,12 @@ fetch_add:
       <p>
         As I understand it, in lock-free multithreaded algorithms, one thread is guaranteed to make progress, so
         overall, our system doesn&apos;t reach a deadlocked state, and this is a significant victory. Of course we can
-        still{" "}
+        still make mistakes in our program logic, leading to one thread to read the wrong/outaded value, so atomic
+        operations alone{" "}
         <a href="https://lwn.net/Articles/847973/" className="underline" rel={"nofollow"} target="_blank">
-          make mistakes
+          aren&apos;t sufficient
         </a>{" "}
-        in our program logic, leading to one thread to read the wrong/outaded value, so atomic operations alone
-        aren&apos;t sufficient for logical soundness.
+        for logical soundness.
         <br />
         <br />
         In other words, since there is no mutual exclusion, shared memory is not &quot;locked&quot; so there is no
@@ -432,7 +439,7 @@ cas:
       <h2 className="mb-4"> Conclusion </h2>
       <p>
         Lock-free algorithms are very interesting. I&apos;m promising myself to write a part 2 where I show the logic of
-        the FIFO queue I&apos;m working on. For now, I hope somebody finds this useful or interesting.
+        the FIFO queue I&apos;m working on.
       </p>
     </article>
   );
