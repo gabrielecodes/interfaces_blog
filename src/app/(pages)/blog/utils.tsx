@@ -11,7 +11,6 @@ async function getPostById(postId: string) {
 
   const Post = dynamic(() =>
     import(`../../content/${fileName}`).then((mod) => {
-      // console.log("mod:", mod);
       return mod.default;
     })
   );

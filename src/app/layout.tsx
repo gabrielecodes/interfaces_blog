@@ -4,7 +4,7 @@ import Nav from "./nav";
 import { Footer } from "./footer";
 
 export const metadata = getSEOTags({
-  title: "Interface Blog",
+  title: "Interfaces Blog",
   description:
     "A blog by Gabriele Costanza about technology, ai, programming, data engineering and cloud technologies.",
   canonicalUrlRelative: "/",
