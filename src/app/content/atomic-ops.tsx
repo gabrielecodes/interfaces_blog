@@ -9,7 +9,7 @@ export default function Article() {
     <article>
       <div className="w-full h-60 mb-10 rounded-md relative">
         <Image
-          src={`${IMG_PREFIX}` + `/gradient3.jpg`}
+          src={`${IMG_PREFIX}` + `/abstract2.jpg`}
           alt={"alt"}
           style={{ borderRadius: "6px", objectFit: "cover" }}
           fill

@@ -1,11 +1,13 @@
 import Image from "next/image";
 
+const IMG_PREFIX = process.env.NODE_ENV == "production" ? "/interfaces_blog" : "";
+
 export default function Article() {
   return (
     <article>
       <div className="w-full h-60 mb-10 rounded-md relative">
         <Image
-          src={`/interfaces_blog/gradient1.jpg`}
+          src={`${IMG_PREFIX}` + `/gradient1.jpg`}
           alt={"alt"}
           style={{ borderRadius: "6px", objectFit: "cover" }}
           fill

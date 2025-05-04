@@ -8,13 +8,15 @@ type Post = {
   date: Date;
 };
 
+const IMG_PREFIX = process.env.NODE_ENV == "production" ? "/interfaces_blog" : "";
+
 export default async function Home() {
   return (
     <main className="md:mt-20 mt-10 min-h-screen">
       <section className="md:mb-20 mb-10">
         <div className="h-60 mb-10 rounded-md relative">
           <Image
-            src={`abstract1.jpg`}
+            src={`${IMG_PREFIX}` + `/abstract1.jpg`}
             alt={"abstract art"}
             priority={true}
             style={{ borderRadius: "6px", objectFit: "cover" }}
