@@ -104,14 +104,10 @@ export default function Article() {
         </div>
       </blockquote>
       <p>
-        This seems to be the new table of values.<em>Technological Realism</em> is realizing that we are in a
-        techno-utopian prison camp. It&apos;s the antidote to the hyper-real. The prevalent narrative in our time paints
-        technology as inherently progressive or liberating, while downplaying its downsides: the consequences on
-        well-being, the ethical traps, and the unforeseen consequences, the confusion about what&apos;s valuable.
-        <br />
-        <br />
-        But realism is not sufficient, it&apos;s just the first step. It helps us to diagnose that something is wrong,
-        but it&apos;s not a cure. <em>Technological Transcendence</em> is the solution.
+        Is this the new table of values we&apos;re moving towards? Are we getting ourselves in a techno-utopian prison?
+        Perhaps we need to take an antidote to the hyper-real. A strong narrative of our time is that technology is
+        inherently progressive or liberating, while it has essentially no downsides: the consequences on well-being, the
+        ethical traps, and the unforeseen consequences, the confusion about what&apos;s valuable.
       </p>
     </article>
   );
