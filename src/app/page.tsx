@@ -56,7 +56,7 @@ const posts = [
     postId: "atomic-ops",
     title: "Atomics, Locks and Micro Benchmarks",
     subtitle: "",
-    date: new Date("2025-03-15"),
+    date: new Date("2025-04-15"),
   },
   {
     postId: "tech-realism",

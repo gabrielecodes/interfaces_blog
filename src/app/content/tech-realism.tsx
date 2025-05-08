@@ -104,10 +104,11 @@ export default function Article() {
         </div>
       </blockquote>
       <p>
-        Is this the new table of values we&apos;re moving towards? Are we getting ourselves in a techno-utopian prison?
-        Perhaps we need to take an antidote to the hyper-real. A strong narrative of our time is that technology is
-        inherently progressive or liberating, while it has essentially no downsides: the consequences on well-being, the
-        ethical traps, and the unforeseen consequences, the confusion about what&apos;s valuable.
+        Is this the new table of values we&apos;re moving towards? Are we getting ourselves into a techno-utopian
+        prison? Perhaps we need to take an antidote to the hyper-real. A strong narrative of our time is that technology
+        is inherently progressive or liberating, with essentially no downsides, but they are there. Below the layer of
+        blinding advertisements you find the damage on well-being, the ethical traps, the confusion about what&apos;s
+        valuable and other unforeseen consequences.
       </p>
     </article>
   );
