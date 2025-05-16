@@ -70,9 +70,10 @@ export default function Article() {
         or correspondence with what&apos;s real.
         <br />
         <br />
-        In my view, there are two factors that lead to this stage: the effect on the individual, the personal factor,
-        and the communication of this new found &quot;meaning&quot;, the social factor. The first, I think, it&apos;s a
-        necessary precondition for the second and for the emergence of the hyper-real.
+        Also the hyper-real is, in some sense, a social phenomenon, and just as with any social phenomenon, there are at
+        least two factors that lead to it: the impact on the individual—the personal factor—and the communication of
+        this newly discovered &quot;meaning&quot;—the social factor. The first, in my view, is a necessary precondition
+        for the second and for the emergence of the hyper-real.
         <br />
         <br />
         Without the personal factor, there wouldn&apos;t be the possibility for the individual to intuitively (and
@@ -81,9 +82,9 @@ export default function Article() {
         pulled by of recommendation systems, the visual stimuli and notifications are also important.
         <br />
         <br />
-        The social factor is largely overlapping with the personal one, since, interacting with others is large part of
-        what we do and contributes to our understanding of the world. I can think that, in the hypothetical scenario of
-        total isolation, much of what we discussed wouldn&apos;t make sense.
+        The social factor significantly overlaps with the personal one, as interacting with others is a major part of
+        our daily lives and shapes our understanding of the world. In fact, in a hypothetical scenario of complete
+        isolation, much of what we&apos;ve discussed would lose its meaning.
         <br />
         <br />
         New difficult questions arise. <em>Can we really talk about progress?</em> What is the ethics of this new world?
@@ -104,11 +105,11 @@ export default function Article() {
         </div>
       </blockquote>
       <p>
-        Is this the new table of values we&apos;re moving towards? Are we getting ourselves into a techno-utopian
-        prison? Perhaps we need to take an antidote to the hyper-real. A strong narrative of our time is that technology
-        is inherently progressive or liberating, with essentially no downsides, but they are there. Below the layer of
-        blinding advertisements you find the damage on well-being, the ethical traps, the confusion about what&apos;s
-        valuable and other unforeseen consequences.
+        Is this the table of values we&apos;ve set up for ourselves? Are we getting ourselves into a techno-utopian
+        prison? I like to think that there is a positive solution and that we should work to achieve it. One step would
+        be to look beyond the simplifying narrative that all hunan endeavors are entirely progressive and liberating.
+        There is always the other side of the coin, maybe we don&apos;t want to see it or it lies below the noisy layer
+        of advertisement where it&apos;s too difficult to see.
       </p>
     </article>
   );

@@ -48,25 +48,53 @@ export default function Article() {
         </div>
       </blockquote>
       <p>
-        Don&apos;t you feel inspired by &quot;the magic&quot; already? No? Wrong answer. AI Agents are not just a
-        prompt! We&apos;re dealing with a system of interconnected components where the model itself is just a part of
-        the system.
-        <br />
-        <br />
         Some of you working in tech may already have caught the irony that&apos;s between the advertised results and the
         reality of production grade technology. I hear promises of magic — but what I understand is that I need to
         program (or buy), connect and configure tools to support AI — which already has a cost and security implications
         on its own. Complexity is no joke. I&apos;m starting to think Todd was right.
         <br />
         <br />
-        The fact that we can build complex systems thanks to AI, hardly implies that humans will be put out of the loop.
-        I&apos;m basing this statment on a couple of considerations. First there is the historical view: the fact that
-        human beings are the unique authors of complex systems and modifiers of their environment is a strong statement
-        that is rooted in the nature of our species and, one can say, the universe itself. It&apos;s difficult to
-        believe that AI, a human creation, can escape this logic. This isn&apos;t just an historical view. In fact those
-        that want to be consistent with the scientific process would have to agree. Science looks, interprets and
-        codifies the regularities of the universe. But as I mentioned above, huaman beings, always being in the loop
-        throughout history, seems to be one of those regularities that&apos;s difficult to wipe away.
+        In the{" "}
+        <a href="https://2025.stateofai.dev/en-US/" className="underline" rel="nofollow" target="_blank">
+          <em>state of web dev AI 2025</em>
+        </a>{" "}
+        report, 4000+ developers participated in giving their opinion on AI and how they use it to do real work. We read
+        that ~70% of developers use AI coding tools weekly, but 76% of them refactor at least <em>half</em> of the
+        generated code. Here&apos;s a quote from a developer:
+      </p>
+      <blockquote className="flex space-x-4">
+        <span className="text-4xl">&#10077;</span>
+        <div className="mt-4">
+          All AI code generation I&apos;ve tried generates a big pile of unmaintainable and non-testable code...
+        </div>
+      </blockquote>
+      <p>
+        It seems difficult to accept that humans will become &quot;obsolete&quot; just because we have a greater
+        capacity to build systems of increasing complexity. There are many theses out there that lean on this side of
+        the argument to varying degrees. I&apos;m going to briefly mentiont a few ideas of general character, perhaps
+        less represented in the mainstream media.
+        <br />
+        <br />
+        Concerning the general idea of <em>human beings being left behind</em> by AI. First the historical viewpoint
+        must be mentioned: human beings have always created more and more complex systems. It&apos; seems to be a
+        natural tedency of our species. One could say, it&apos;s a statement made by nature itself. It&apos;s difficult
+        to accept without reservations that AI can undo this mechanism. This isn&apos;t just an historical view. In fact
+        those that want to be consistent with the scientific process would have to agree. Science looks, interprets and
+        codifies the regularities of the universe. AI replacing human beings seems to contradict the regularity
+        mentioned above, that human beings are still here despite all the complexity and more or less catastrophic
+        failures of our endeavors. Certainly such technologies have the power to create real shocks.{" "}
+        <em>
+          (edit:I&apos;ve written more about it in the article on&ensp;
+          <a
+            href="https://gabrielecodes.github.io/interfaces_blog/blog/tech-realism"
+            className="underline"
+            rel="nofollow"
+            target="_blank"
+          >
+            Technological Hyper Realism
+          </a>
+        </em>
+        .)
         <br />
         <br />
         The second consideration regards the inability — or perhaps impossibility — of AI to make statements that are{" "}
