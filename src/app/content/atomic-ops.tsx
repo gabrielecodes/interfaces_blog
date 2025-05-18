@@ -16,10 +16,12 @@ export default function Article() {
         />
         <h1 className="px-2 m-2 absolute bottom-0 bg-background rounded-md">Atomics, Locks and Micro Benchmarks</h1>
       </div>
+      <h2 className="mb-4">Introduction</h2>
       <p>
         I&apos;m working on a rust crate that implements a FIFO queue using atomics so I&apos;ve begun a series of
-        experiments to understand their performance tradeoffs. I&apos;m also adding some comments here and there that
-        might be useful to those venturing in this field for the first time.
+        experiments to understand how they work. Atomics are new to me and I want to get an idea on what I&apos;m
+        dealing with, perhaps these notes will also be useful to anybody that wants to get a feel of what are the
+        performance tradeoffs involved.
         <br />
         <br />
         In simple terms, atomic types and operations are building blocks for concurrent programming, allowing for
@@ -52,7 +54,10 @@ export default function Article() {
         what&apos;s behind it. A few notes:
       </p>
       <ul className="list-disc my-2 text-textcolor">
-        <li className="ml-8">I&apos;m using an old i7 Mac,</li>
+        <li className="ml-8">
+          I&apos;m using an old i7 Mac in case you&apos;re wondering. Althugh I&apos;ll be posting only relative
+          performances in this article.
+        </li>
         <li className="ml-8">I&apos;m using the standard memory allocator (no jemalloc/mimalloc),</li>
         <li className="ml-8">
           I&apos;m compling with <mark>opt-level=3</mark>.
@@ -60,7 +65,11 @@ export default function Article() {
         <li className="ml-8">
           I&apos;m not using <mark>perf</mark> or similar for this one, just measuring time. It&apos;s not the perfect
           way to proceed but it should be enough to give me a sense of what I&apos;m working with. I measure average
-          execution time and variance. I&apos;m aiming at having better benchmarks for part 2.
+          execution time and variance. I&apos;m aiming at having better benchmarks (with{" "}
+          <a href="https://crates.io/crates/criterion" className="underline" rel={"nofollow"} target="_blank">
+            <em>criterion</em>
+          </a>
+          ) for part 2.
         </li>
       </ul>
       <p>
@@ -104,7 +113,7 @@ ret`}
             lang="rust"
             code={`const ITERS: u64 = 10_000_000;
 
-[inline(never)]
+#[inline(never)]
 fn nop() {
     for _ in 1..ITERS {
         black_box(());
@@ -381,10 +390,9 @@ fetch_add:
         <li className="ml-8">Progress is guaranteed in a well-designed lock-free multithreaded algorithm.</li>
       </ul>
       <p>
-        As I understand it, in lock-free multithreaded algorithms, one thread is guaranteed to make progress, so
-        overall, our system doesn&apos;t reach a deadlocked state, and this is a significant victory. Of course we can
-        still make mistakes in our program logic, leading to one thread to read the wrong/outaded value, so atomic
-        operations alone{" "}
+        As I understand it, in lock-free multithreaded algorithms, one thread is guaranteed to make progress, so overall
+        our system doesn&apos;t reach a deadlocked state, and this is a significant victory. Of course we can still make
+        mistakes in our program logic, leading to one thread to read the wrong/outaded value, so atomic operations alone{" "}
         <a href="https://lwn.net/Articles/847973/" className="underline" rel={"nofollow"} target="_blank">
           aren&apos;t sufficient
         </a>{" "}
